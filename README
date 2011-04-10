@@ -4,6 +4,17 @@ This script is an improvment over phpweby version so it also supports MySQL serv
 
 read here http://phpweby.com/software/ip2country for how to use. Just replace the original import.php file from http://phpweby.com/software/ip2country with my version.
 
+BTW, if your server is behind some load-balancer or proxy (like when hosting in Amazon's AWS), the ip2country will fail detecting the client IP.
+Use 
+function get_client_ip()
+{
+	$ip = isset($_SERVER['HTTP_X_FORWARDED_FOR']) ? $_SERVER['HTTP_X_FORWARDED_FOR'] : $_SERVER['REMOTE_ADDR'];
+	return $ip;
+}
+
+to get the client's real IP.
+
+
 Original work is licensed under GNU
 
 /*********************************************************
