@@ -1,0 +1,52 @@
+An improved PHP script for ip2location (http://phpweby.com/software/ip2country).
+This import.php file will take a CSV from http://www.maxmind.com/download/geoip/database/GeoIPCountryCSV.zip and insert it into the database.
+This script is an improvment over phpweby version so it also supports MySQL servers with 'max_allowed_packet' lower than the size of the input CSV file.
+
+read here http://phpweby.com/software/ip2country for how to use. Just replace the original import.php file from http://phpweby.com/software/ip2country with my version.
+
+Original work is licensed under GNU
+
+/*********************************************************
+Project: PHPWeby ip2country software version 1.0.2
+Url: http://phpweby.com/
+Copyright: (C) 2008 Blagoj Janevski - bl@blagoj.com
+Project Manager: Blagoj Janevski
+
+More info, sample code and code implementation can be found here:
+http://phpweby.com/software/ip2country
+
+This software uses GeoLite data created by MaxMind, available from
+http://maxmind.com
+
+This file is part of i2pcountry module for PHP.
+
+For help, comments, feedback, discussion ... please join our
+Webmaster forums - http://forums.phpweby.com
+
+**************************************************************************
+*  If you like this software please link to us!                          *
+*  Use this code:						         *
+*  <a href="http://phpweby.com/software/ip2country">ip to country</a>    *
+*  More info can be found at http://phpweby.com/link                     *
+**************************************************************************
+
+License:
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 2 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License along
+with this program; if not, write to the Free Software Foundation, Inc.,
+51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+
+*********************************************************/
+/*
+* Additional work by Menny Even Danan http://www.evendanan.net
+* Supports SQL servers with packet size limitation (where the 'max_allowed_packet' is lower than the size of the input CSV file)
+*/
